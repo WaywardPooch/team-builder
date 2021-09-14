@@ -1,6 +1,8 @@
+// Import Libraries
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
+// Setup Styles
 const StyledMemberList = styled.div`
   display: flex;
   justify-content: center;
@@ -17,13 +19,17 @@ const StyledMemberList = styled.div`
   }
 `;
 
+// Create MemberList component
 const MemberList = () => {
+  // Set up states
   const [members, setMembers] = useState([]);
 
+  // Create effect hook to update members
   useEffect(() => {
     setMembers(["Samwise Gamgee", "Frodo Baggins", "Strider", "Gandalf"]);
   }, [members]);
 
+  // Return component markup
   return (
     <StyledMemberList>
       <div>
@@ -36,4 +42,5 @@ const MemberList = () => {
   );
 };
 
+// Export MemberList component
 export default MemberList;

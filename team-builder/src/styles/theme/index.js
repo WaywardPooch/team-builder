@@ -1,3 +1,4 @@
+// Primary site branding
 const theme = {
   primaryColor: "coral",
   black: "#2f2f2f",
@@ -6,4 +7,5 @@ const theme = {
   breakpointMobile: "max-width: 550px",
 };
 
+// Export site theme
 export default theme;

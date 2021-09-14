@@ -1,6 +1,8 @@
+// Import libraries
 import React from "react";
 import styled from "styled-components";
 
+// Setup styles
 const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.black};
   h2 {
@@ -13,7 +15,9 @@ const StyledHeader = styled.header`
   }
 `;
 
+// Create Header component
 const Header = () => {
+  // Return markup
   return (
     <StyledHeader>
       <h2>Team Builder</h2>
@@ -21,4 +25,5 @@ const Header = () => {
   );
 };
 
+// Export Header component
 export default Header;
