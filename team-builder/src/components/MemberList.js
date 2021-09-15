@@ -1,5 +1,5 @@
 // Import Libraries
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 // Setup Styles
@@ -10,6 +10,7 @@ const StyledMemberList = styled.div`
     max-width: 800px;
     p {
       background-color: white;
+      border-radius: 7px;
       box-shadow: 0 2px 4px 0 ${(props) => props.theme.shadow};
       font-size: 2rem;
       margin: 1rem 0;
@@ -20,14 +21,9 @@ const StyledMemberList = styled.div`
 `;
 
 // Create MemberList component
-const MemberList = () => {
+const MemberList = (props) => {
   // Set up states
-  const [members, setMembers] = useState([]);
-
-  // Create effect hook to update members
-  useEffect(() => {
-    setMembers(["Samwise Gamgee", "Frodo Baggins", "Strider", "Gandalf"]);
-  }, [members]);
+  const { members } = props;
 
   // Return component markup
   return (
