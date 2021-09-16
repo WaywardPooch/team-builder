@@ -52,8 +52,17 @@ const Form = (props) => {
       <label>
         Name:
         <input type="text" onChange={handleChange} />
-        <button onClick={handleSubmit}>Submit</button>
       </label>
+      <label>
+        Email:
+        <input type="text" onChange={handleChange} />
+      </label>
+      <label>
+        Role:
+        <input type="text" onChange={handleChange} />
+      </label>
+      <br />
+      <button>Submit</button>
     </StyledForm>
   );
 };

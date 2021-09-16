@@ -14,7 +14,18 @@ const StyledApp = styled.div`
 
 // Create the App Component
 const App = () => {
-  const [members, setMembers] = useState(["Samwise Gamgee", "Bilbo Baggins"]);
+  const [members, setMembers] = useState([
+    {
+      name: "Samwise Gamgee",
+      email: "sgamgee@theshire.com",
+      role: "Gardener",
+    },
+    {
+      name: "Laegolas",
+      email: "laegolas@rivendell.com",
+      role: "Scout",
+    },
+  ]);
   // Return markup
   return (
     <StyledApp>
