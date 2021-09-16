@@ -35,19 +35,26 @@ const StyledForm = styled.form`
 
 const Form = (props) => {
   const [nameInputValue, setNameInputValue] = useState("");
+  const [emailInputValue, setEmailInputValue] = useState("");
+  const [roleInputValue, setRoleInputValue] = useState("");
   const { members, setMembers } = props;
 
   const handleChange = (event) => {
     setNameInputValue(event.target.value);
+    setEmailInputValue(event.target.value);
+    setRoleInputValue(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setMembers([...members, nameInputValue]);
+    setMembers([
+      { name: nameInputValue, email: emailInputValue, role: roleInputValue },
+      ...members,
+    ]);
   };
 
   return (
-    <StyledForm>
+    <StyledForm onSubmit={handleSubmit}>
       <h3>Add a team member</h3>
       <label>
         Name:
